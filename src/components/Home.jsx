@@ -18,7 +18,9 @@ export default function Home() {
       <div className="container">
         <div className="flex heading">
           <div className="col-4">
-            <h1 className="h1-heading text-align-left"> selamat datang</h1>
+            <h1 className="h1-heading text-align-left">
+              selamat datang <span className="nama2">{nama2}</span>
+            </h1>
             <p className="p">
               dalam blog saya membagikan informasi seputar web
             </p>
@@ -27,13 +29,26 @@ export default function Home() {
             <img className="img-fit" src="/images/muka.png" alt="gambar"></img>
           </div>
         </div>
-        <div className="flex">
-          <h1 className="h1-heading">{nama2}</h1>
-          <h1 style={{ color: "white" }}>Masukkan nama terlebih dahulu!</h1>
-          <form style={{ visibility: btnDisplay ? "visible" : "hidden" }}>
-            <input type="text" name="name" onChange={Nama} />
+        <div className="flex2">
+          <h1
+            style={{
+              color: "white",
+              visibility: btnDisplay ? "visible" : "hidden",
+              margin: "5px",
+            }}
+          >
+            Masukkan nama terlebih dahulu!
+          </h1>
+          <form
+            className="flex2"
+            style={{
+              visibility: btnDisplay ? "visible" : "hidden",
+              margin: "5px",
+            }}
+          >
+            <input type="text" name="name" className="input" onChange={Nama} />
             <p></p>
-            <button className="card-button-profile" onClick={sembunyikan}>
+            <button className="btn-Tampil" onClick={sembunyikan}>
               tekan
             </button>
           </form>
